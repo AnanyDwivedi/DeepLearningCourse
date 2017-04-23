@@ -1,0 +1,21 @@
+def misclass(tru,pred):
+	z=0
+	o=0
+	t = numpy.argmax(tru,1)
+	p = numpy.argmax(pred,1)
+	
+	Zc = 0
+	Oc = 0
+	for i in range(tru.shape[0]):	
+		if t[i] == 0:
+			zc+=1
+		else:
+			oc+=1
+		
+		if t[i]!=p[i]:
+			if t[i] == 0:
+				z+=1
+			else:
+				o+=1
+
+	print "\n Z = %d O = %d Zc =%d Oc = %d"%(z,o,Zc,Oc)
